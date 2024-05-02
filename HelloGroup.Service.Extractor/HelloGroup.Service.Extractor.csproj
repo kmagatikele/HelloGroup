@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-HelloGroup.Service.Extractor-eeddaab8-9e26-43e3-ad12-b0fc1846732f</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+	<ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HelloGroup.Model\HelloGroup.Model.csproj" />
+    <ProjectReference Include="..\HelloGroup.Repository\HelloGroup.Repository.csproj" />
+    <ProjectReference Include="..\HelloGroup.Shared\HelloGroup.Shared.csproj" />
+  </ItemGroup>
+</Project>
